@@ -19,7 +19,7 @@ function getResponse(user) {
                 let date = new Date(lastActvity.created_at)
                 result =`Sua última atividade no Github foi um ${lastActvity.type}🆕\nNo repositório ${lastActvity.repo.name} 🗂\nDo user fabuloso ${lastActvity.actor.display_login} 🧙‍♂️\nData ${date.getDay()}/${date.getMonth() - 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}📆`
             }
-            //let keys = Object.keys(data).map((key) => [key, data[key]])
+            let keys = Object.keys(data).map((key) => [key, data[key]])
             return result
         }).catch(err => {
             console.log(err)
